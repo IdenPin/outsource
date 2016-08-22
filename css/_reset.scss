@@ -1,0 +1,197 @@
+//100vw表示设备宽度，除以3.75这里是以iphone6 的宽度375px为标准，为了保证html的字体大小为100px。
+//这样我们在换算的时候，1px 就是0.01rem，就很容易计算。
+// =====可以Js控制====
+//document.documentElement.style.fontSize = $(document.documentElement).width()/3.75 + 'px';
+// $(window).on('resize', function() {
+//     document.documentElement.style.fontSize = $(document.documentElement).width()/3.75 + 'px';
+// })
+
+body,
+html {
+    height: 100%;
+    margin: 0 auto!important;
+}
+html {
+    position: relative;
+    min-width: 320px;
+    font-size: calc(100vw / 3.75);
+}
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: .16rem;
+    line-height: 1.6;
+    width: 100%;
+    margin: 0;
+    background-color: #f8f8f8;
+    -webkit-tap-highlight-color: transparent;
+}
+a,
+applet,
+article,
+aside,
+b,
+blockquote,
+body,
+canvas,
+caption,
+center,
+dd,
+details,
+dl,
+dt,
+em,
+embed,
+fieldset,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+i,
+iframe,
+img,
+label,
+legend,
+li,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+u,
+ul,
+var {
+    margin: 0;
+    padding: 0;
+    /*防止点击闪烁*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /*缩放网页，文字大小不变*/
+    -webkit-text-size-adjust: none;
+    /*禁止选择*/
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: baseline;
+}
+address,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+legend,
+menu,
+nav,
+section,
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+time {
+    display: inline;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+img {
+    border: none;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+/*重置部分表单圆角和内阴影*/
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea {
+    -webkit-appearance: none;
+    border: 1px solid #c6c6c6;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+/*去除文本框上下箭头*/
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+a {
+    text-decoration: none;
+    /*ios禁止页面在新窗口打开*/
+    -webkit-touch-callout: none;
+}
+em,
+i {
+    font-style: normal;
+}
+li {
+    list-style: none;
+}
+
+
+
+
+
+@function rem($px, $base-font-size: 100px) {
+  @if (unitless($px)) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return rem($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+//
+// @mixin px2rem($property,$px-values,$baseline-px:16px,$support-for-ie:false){
+//   //Conver the baseline into rems
+//   $baseline-rem: $baseline-px / 1rem * 1;
+//   //Print the first line in pixel values
+//   @if $support-for-ie {
+//     #{$property}: $px-values;
+//   }
+//   //if there is only one (numeric) value, return the property/value line for it.
+//   @if type-of($px-values) == "number"{
+//     #{$property}: $px-values / $baseline-rem;
+//   }
+//   @else {
+//     //Create an empty list that we can dump values into
+//     $rem-values:();
+//     @each $value in $px-values{
+//       // If the value is zero or not a number, return it
+//       @if $value == 0 or type-of($value) != "number"{
+//         $rem-values: append($rem-values, $value / $baseline-rem);
+//       }
+//     }
+//     // Return the property and its list of converted values
+//     #{$property}: $rem-values;
+//   }
+// }
