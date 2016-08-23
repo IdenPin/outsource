@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "common";
+body{
+  background:#f9e2cb;
+}
+.warp{
+  overflow:hidden;
+  .bg-banner{
+    .banner-img{
+      width:100%;
+      display:block;
+    }
+  }
+  .content{
+    padding:0 20px;
+    box-sizing:border-box;
+    h3{
+      font-size:rem(20px);
+      color:#39120c;
+      text-align:center;
+      line-height:rem(26px);
+      margin-bottom: rem(5px);
+    }
+    p{
+      font-size:rem(16px);
+      text-indent:rem(20px);
+      line-height: rem(22px);
+      letter-spacing: rem(1px);
+    }
+    .QR-intro-font{
+      width:rem(145px);
+      margin: 10px auto;
+      img{
+        width:100%;
+      }
+    }
+    .QR-img{
+      width:rem(190px);
+      margin:0 auto;
+      img{
+        width:100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@charset "utf-8";
+@import "common";
+body{
+  background:#00a0e8;
+}
+.warp{
+  width:100%;
+  overflow:hidden;
+  .banner-bg{
+    width:100%;
+    vertical-align: top;
+  }
+  .container{
+    width:100%;
+    .content-img{
+      width:100%;
+      img{
+        width:100%;
+        display:block;
+      }
+    }
+  }
+}
