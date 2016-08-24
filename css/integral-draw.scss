@@ -1,0 +1,151 @@
+@charset "utf-8";
+@import "common";
+body {
+    background: #f1473f;
+}
+.warp {
+    width: 100%;
+    overflow: hidden;
+    .common-bg {
+        img {
+            width: 100%;
+        }
+    }
+    .section-1 {
+      position: relative;
+      .user-info{
+        position: absolute;
+        color:#fff;
+        bottom:rem(34px);
+        left:rem(26px);
+      }
+    }
+    // 转盘
+    .section-2 {
+        position: relative;
+        .rotary-table {
+            position: absolute;
+            z-index: 9999;
+            top: rem(92px);
+            left: rem(30px);
+            .rotary-li {
+                position: relative;
+                img {
+                    width: rem(105px);
+                }
+                .red-bao {
+                    position: absolute;
+                    width: rem(36px);
+                    top: rem(48px);
+                    left: rem(33px);
+                    img{
+                      width:100%;
+                    }
+                }
+                .name {
+                    color: #fff;
+                    position: absolute;
+                    top: rem(18px);
+                    left: rem(18px);
+                }
+                .m{
+                  color: #f1473f;
+                  position: absolute;
+                  bottom:rem(13px);
+                  left:rem(42px);
+                  font-size:rem(8px);
+                  z-index:9999;
+                }
+                .thanks {
+                    top: rem(30px);
+                    left: rem(20px);
+                }
+                .start {
+                    top: rem(45px);
+                    left: rem(24px);
+                    color: #00a2e6;
+                }
+            }
+        }
+    }
+    // 中奖名单
+    .section-3 {
+        position: relative;
+        .draw-book {
+            position: absolute;
+            width: rem(72px);
+            height: rem(51px);
+            display: block;
+            top: rem(20px);
+            left: rem(15px);
+            z-index: 99;
+        }
+        .tab-container {
+            // height: rem(220px);
+            width: rem(343px);
+            top: rem(48px);
+            left: rem(15px);
+            position: absolute;
+            .tab {
+                width: 100%;
+                position: relative;
+                border: 1px solid #333;
+                overflow: hidden;
+                border-radius: rem(6px);
+                box-sizing: border-box;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                .tab-left,
+                .tab-right {
+                    background: #81cef2;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #fff;
+                    width: 50%;
+                    float: left;
+                    text-align: center;
+                    height: rem(50px);
+                    line-height: rem(50px);
+                    box-sizing: border-box;
+                    border-bottom: rem(1px) solid #333;
+                    border-bottom-right-radius: 0;
+                }
+                .tab-right {
+                    border-left: rem(1px) solid #333;
+                    border-top-right-radius: 5px;
+                }
+                .active {
+                    position: relative;
+                    background: #00a2e6;
+                    i {
+                        position: absolute;
+                        left: rem(65px);
+                        top: rem(36px);
+                        height: rem(15px);
+                        width: rem(40px);
+                        display: block;
+                        background: url('../img/draw-tab-active.png');
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+                height: rem(170px);
+                overflow-y: scroll;
+                position: absolute;
+                top: rem(52px);
+                background: #fff;
+                padding: rem(5px) rem(30px);
+                box-sizing: border-box;
+                line-height: rem(30px);
+                letter-spacing: 2;
+                border-radius: rem(5px);
+                border: rem(1px) solid #333;
+                border-top: none;
+                border-top: none;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}
