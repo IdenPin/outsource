@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import "common";
+.mt15{
+  margin-top: rem(15px);
+}
+.warp {
+    background: #fdffdc;
+    overflow: hidden;
+    .bg-banner {
+        position: relative;
+        .banner-img {
+            width: 100%;
+            display: block;
+        }
+        .go-share-btn {
+            width: rem(84px);
+            display: block;
+            position: absolute;
+            right: rem(10px);
+            top: rem(12px);
+            img {
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+    .content {
+        overflow: hidden;
+        padding: 0 rem(20px);
+        box-sizing: border-box;
+        .main-text {
+            color: #00487d;
+            font-size: rem(20px);
+            text-align: center;
+            text-shadow: rem(2px) rem(3px) rem(5px) #c6c5a9;
+        }
+        h3 {
+            font-size: rem(20px);
+            color: #39120c;
+            text-align: center;
+            line-height: rem(26px);
+            margin-bottom: rem(5px);
+        }
+        .sub-text {
+            font-size: rem(16px);
+            text-indent: rem(30px);
+            line-height: rem(22px);
+            letter-spacing: rem(1px);
+            text-align: justify;
+        }
+        .go-to-evaluate {
+            width: rem(170px);
+            overflow: hidden;
+            margin: rem(20px) auto rem(18px);
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .activity-rules {
+            color: #333333;
+            font-size: rem(12px);
+            margin-bottom: rem(12px);
+            p {
+                font-size: rem(12px);
+                text-indent: 0;
+                line-height: rem(26px);
+            }
+        }
+        .QR-intro-font {
+            width: rem(145px);
+            margin: rem(10px) auto;
+            img {
+                width: 100%;
+            }
+        }
+        .QR-img {
+            width: rem(190px);
+            margin: 0 auto;
+            img {
+                margin-bottom: rem(20px);
+                width: 100%;
+            }
+        }
+    }
+}
