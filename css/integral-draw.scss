@@ -12,13 +12,13 @@ body {
         }
     }
     .section-1 {
-      position: relative;
-      .user-info{
-        position: absolute;
-        color:#fff;
-        bottom:rem(34px);
-        left:rem(26px);
-      }
+        position: relative;
+        .user-info {
+            position: absolute;
+            color: #fff;
+            bottom: rem(34px);
+            left: rem(26px);
+        }
     }
     // 转盘
     .section-2 {
@@ -38,8 +38,8 @@ body {
                     width: rem(36px);
                     top: rem(48px);
                     left: rem(33px);
-                    img{
-                      width:100%;
+                    img {
+                        width: 100%;
                     }
                 }
                 .name {
@@ -48,13 +48,13 @@ body {
                     top: rem(18px);
                     left: rem(18px);
                 }
-                .m{
-                  color: #f1473f;
-                  position: absolute;
-                  bottom:rem(13px);
-                  left:rem(42px);
-                  font-size:rem(8px);
-                  z-index:9999;
+                .m {
+                    color: #f1473f;
+                    position: absolute;
+                    bottom: rem(13px);
+                    left: rem(42px);
+                    font-size: rem(8px);
+                    z-index: 9999;
                 }
                 .thanks {
                     top: rem(30px);
@@ -124,7 +124,7 @@ body {
                         height: rem(15px);
                         width: rem(40px);
                         display: block;
-                        background: url('../img/draw-tab-active.png');
+                        // background: url('../img/draw-tab-active.png');
                     }
                 }
             }
@@ -145,7 +145,35 @@ body {
                 border-top: none;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
+                .data {
+                    margin: 0 rem(15px);
+                }
             }
         }
+    }
+}
+// 弹层
+.gray-bounced {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.82);
+    position: fixed;
+    z-index: 999999;
+}
+.bounced {
+    z-index: 999999;
+    width: rem(303px);
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    img {
+        width: 100%;
     }
 }
