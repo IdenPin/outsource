@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import "common";
+.warp {
+    width: 100%;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .icon-close {
+        display: block;
+        width: rem(45px);
+        height: rem(45px);
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+    .activity-rules {
+        display: block;
+        width: rem(200px);
+        height: rem(33px);
+        position: absolute;
+        left: (95px);
+        bottom: 0;
+        cursor: pointer;
+    }
+}

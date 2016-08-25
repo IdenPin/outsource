@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "common";
+body,html{
+  background: #fff;
+}
+.warp {
+    padding: rem(20px) rem(15px);
+    box-sizing: border-box;
+    p{
+      margin-bottom: rem(10px);
+    }
+}

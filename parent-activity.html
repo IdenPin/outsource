@@ -12,7 +12,9 @@
 <body>
     <div class="warp">
         <div class="bg-banner">
-            <a href="parent-activity-share.html" class="go-share-btn">
+            <!-- <a href="" class="go-share-btn"> -->
+            <a href="javascript:void(0)" class="go-share-btn">
+
                 <img src="img/parent-share-btn.png">
             </a>
             <img src="img/parent-banner-bg.png" class="banner-img">
@@ -36,5 +38,67 @@
         </div>
     </div>
 </body>
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    // /**
+    //  * 获取客户端用户信息
+    //  * role = 1 //教师   2家长
+    //  */
+    // var userInfo = userInfo || {};
+    // window.location.href = 'qtapp://api/userinfo/eyJwYWNrYWdlTmFtZSI6InlvdXI6Ly9wYWNrYWdlbmFtZSJ9';
+    // function getAppUserInfo(content) {
+    //     userInfo = content;
+    //     userInfo.area = content.cityId;
+    //     userInfo.userType = content.role;
+    //     userInfo.apiVersion = '1.0';
+    //     userInfo.session = $('#session').val();
+    //     // userInfo.schoolId = '414458';//正式测试需要注释掉
+    //     myApp.getNav();
+    //     myApp.initViewSize();
+    //     myApp.addEventForDOM();
+    //     setTimeout(function() {
+    //         var title = {
+    //             navigationTitle: content.school
+    //         };
+    //         var titleStr = $.base64.encode(JSON.stringify(title));
+    //         window.location.href = 'qtapp://api/update/' + titleStr;
+    //     }, 500);
+    // }
+    //
+    // function share() {
+    //     var content = {
+    //         text: '',
+    //         link: '',
+    //         image: ''
+    //     };
+    //     if (userInfo.role == 2) {
+    //         content.link = 'http://218.30.22.71:38112/readingClassics/share';
+    //         content.text = '家长端活动';
+    //     } else {
+    //         content.link = 'http://218.30.22.71:38112/readingClassics/share';
+    //         content.text = '家长端活动';
+    //     }
+    //     var contentStr = $.base64.encode(JSON.stringify(content));
+    //     window.location.href = 'qtapp://api/share/0/' + contentStr;
+    // }
+    // $('.go-share-btn').on('click', function() {
+    //     share();
+    //     return false;
+    // });
+
+    function share() {
+        var content = {
+            text: '家长端活动',
+            link: 'http://xxxx/parent-activity-share.html', //部署地址
+            image: ''
+        };
+        var contentStr = $.base64.encode(JSON.stringify(content));
+        window.location.href = 'qtapp://api/call/content/' + contentStr;
+    }
+    $('.go-share-btn').on('click', function() {
+        share();
+        return false;
+    });
+</script>
 
 </html>

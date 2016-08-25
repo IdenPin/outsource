@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>活动介绍</title>
+    <link rel="stylesheet" href="css/growth-value.css">
+</head>
+<body>
+    <div class="warp">
+      <i class="icon-close"></i>
+      <img src="img/growth-value.png">
+      <div class="activity-rules"></div>
+    </div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript">
+  $('.icon-close').click(function(){
+    $('.warp').hide();
+  })
+  $('.activity-rules').click(function(){
+    window.location.href = '/growth-value-rule.html'
+  })
+</script>
+</html>

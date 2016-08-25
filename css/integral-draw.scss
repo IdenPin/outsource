@@ -20,54 +20,6 @@ body {
             left: rem(26px);
         }
     }
-    // 转盘
-    .section-2 {
-        position: relative;
-        .rotary-table {
-            position: absolute;
-            z-index: 9999;
-            top: rem(92px);
-            left: rem(30px);
-            .rotary-li {
-                position: relative;
-                img {
-                    width: rem(105px);
-                }
-                .red-bao {
-                    position: absolute;
-                    width: rem(36px);
-                    top: rem(48px);
-                    left: rem(33px);
-                    img {
-                        width: 100%;
-                    }
-                }
-                .name {
-                    color: #fff;
-                    position: absolute;
-                    top: rem(18px);
-                    left: rem(18px);
-                }
-                .m {
-                    color: #f1473f;
-                    position: absolute;
-                    bottom: rem(13px);
-                    left: rem(42px);
-                    font-size: rem(8px);
-                    z-index: 9999;
-                }
-                .thanks {
-                    top: rem(30px);
-                    left: rem(20px);
-                }
-                .start {
-                    top: rem(45px);
-                    left: rem(24px);
-                    color: #00a2e6;
-                }
-            }
-        }
-    }
     // 中奖名单
     .section-3 {
         position: relative;
@@ -128,7 +80,8 @@ body {
                     }
                 }
             }
-            .content {
+            .content1,
+            .content2 {
                 width: 100%;
                 height: rem(170px);
                 overflow-y: scroll;
@@ -137,7 +90,7 @@ body {
                 background: #fff;
                 padding: rem(5px) rem(30px);
                 box-sizing: border-box;
-                line-height: rem(30px);
+                line-height: rem(32px);
                 letter-spacing: 2;
                 border-radius: rem(5px);
                 border: rem(1px) solid #333;
@@ -145,35 +98,130 @@ body {
                 border-top: none;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
-                .data {
-                    margin: 0 rem(15px);
+                .user-name {
+                    width: rem(100px);
+                    display: inline-block;
+                }
+                .date {
+                    margin-right: rem(15px);
                 }
             }
         }
     }
 }
 // 弹层
-.gray-bounced {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.82);
-    position: fixed;
-    z-index: 999999;
-}
-.bounced {
-    z-index: 999999;
-    width: rem(303px);
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    img {
+.toast {
+    .gray-bounced {
+        height: 100%;
         width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.82);
+        position: fixed;
+        z-index: 999999;
+    }
+    .bounced {
+        z-index: 999999;
+        width: rem(303px);
+        margin: auto;
+        position: absolute;
+        top: rem(300px);
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        img {
+            width: 100%;
+        }
+        .prize {
+            color: #db483a;
+            font-size: rem(24px);
+            letter-spacing: 2;
+            position: relative;
+            top: rem(-205px);
+            left: 41%;
+            font-weight: bold;
+        }
+    }
+}
+.section-2 {
+    position: relative;
+}
+#lottery {
+    position: absolute;
+    top: rem(92px);
+    left: rem(33px);
+    width: 100%;
+    table td {
+        width: rem(99px);
+        height: rem(77px);
+        text-align: center;
+        vertical-align: middle;
+        background-color: #ccc;
+        font-size: rem(24px);
+        color: #fff;
+        .start {
+            height: rem(77px);
+            width: 100%;
+            border: none;
+            line-height: rem(77px);
+            display: block;
+            text-decoration: none;
+            color: #00a2e6;
+            font-size: rem(14px);
+            box-sizing: border-box;
+            padding-top: rem(20px);
+        }
+        .active {
+            background: rgba(255,255,255,0.68)!important;
+            // background: rgba(0, 161, 233, 0.5) !important;
+            height: rem(74px);
+            width: rem(96px);
+            border-radius: rem(5px);
+            margin-left: rem(1px);
+        }
+    }
+    // 背景图
+    .lottery-unit-0 {
+        background: url('../img/rotary/rotary-img-0.png');
+    }
+    .lottery-unit-1 {
+        background: url('../img/rotary/rotary-img-1.png');
+    }
+    .lottery-unit-2 {
+        background: url('../img/rotary/rotary-img-2.png');
+    }
+    .lottery-unit-3 {
+        background: url('../img/rotary/rotary-img-5.png');
+    }
+    .lottery-unit-4 {
+        background: url('../img/rotary/rotary-img-3.png');
+    }
+    .lottery-unit-5 {
+        background: url('../img/rotary/rotary-img-7.png');
+    }
+    .lottery-unit-6 {
+        background: url('../img/rotary/rotary-img-6.png');
+    }
+    .lottery-unit-7 {
+        background: url('../img/rotary/rotary-img-3.png');
+    }
+    .lottery-start .start {
+        background: url('../img/rotary/rotary-img-4.png');
+    }
+    .lottery-start .start,
+    .lottery-unit-0,
+    .lottery-unit-1,
+    .lottery-unit-2,
+    .lottery-unit-3,
+    .lottery-unit-4,
+    .lottery-unit-5,
+    .lottery-unit-6,
+    .lottery-unit-7 {
+        width: rem(99px);
+        height: rem(77px);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }

@@ -13,7 +13,7 @@
     <div class="warp">
         <div class="bg-banner">
             <img src="img/teacher-banner-bg.png" class="banner-img">
-            <a href="teacher-activity-share.html" class="go-share-btn">
+            <a href="javascript:void(0)" class="go-share-btn">
                 <img src="img/parent-share-btn.png">
             </a>
         </div>
@@ -35,6 +35,22 @@
             </div>
         </div>
     </div>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        function share() {
+            var content = {
+                text: '教师端活动',
+                link: 'http://xxxx/teacher-activity-share.html', //部署地址
+                image: ''
+            };
+            var contentStr = $.base64.encode(JSON.stringify(content));
+            window.location.href = 'qtapp://api/call/content/' + contentStr;
+        }
+        $('.go-share-btn').on('click', function() {
+            share();
+            return false;
+        });
+    </script>
 </body>
 
 </html>
