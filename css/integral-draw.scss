@@ -80,8 +80,7 @@ body {
                     }
                 }
             }
-            .content1,
-            .content2 {
+            .content {
                 width: 100%;
                 height: rem(170px);
                 overflow-y: scroll;
@@ -103,7 +102,8 @@ body {
                     display: inline-block;
                 }
                 .date {
-                    margin-right: rem(15px);
+                    margin-right: rem(30px);
+                    margin-left: rem(10px);
                 }
             }
         }
